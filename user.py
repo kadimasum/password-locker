@@ -5,7 +5,7 @@ class User:
 
     users = []
 
-    
+
     def __init__(self, name, username, email, phone_number, password):
         self.name = name
         self.username = username
@@ -61,10 +61,14 @@ class User:
         return user
 
     @classmethod
-    def update_user_name(cls, email, password):
+    def update_password(cls, email, password):
         user = cls.find_user(email)
         user.password = password
         return user
+
+    @classmethod
+    def all_users(cls):
+        return cls.users
 
     
         
