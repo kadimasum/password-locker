@@ -1,7 +1,11 @@
 import http
 
 class User:
+
+
     users = []
+
+    
     def __init__(self, name, username, email, phone_number, password):
         self.name = name
         self.username = username
